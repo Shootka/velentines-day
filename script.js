@@ -5,10 +5,10 @@
     document.getElementById("valentine").innerText = valentine;
   }
   const message = urlParams.get("message");
+
   if (message) {
     document.getElementById("message").innerText = message;
   }
-
   const randomInt = (n) => Math.floor(Math.random() * n);
   document.getElementById("dynamic").innerText = `
     @keyframes spin {
@@ -43,3 +43,4 @@
     document.getElementById("falling-hearts").appendChild(heartDiv);
   }
 })();
+

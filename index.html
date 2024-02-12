@@ -1,38 +1,115 @@
-<html>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<head>
-		<link rel="icon" type="image/x-icon" href="./favicon.ico">
-		<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-		<link href="./style.css" rel="stylesheet" type="text/css">
-		<style id="dynamic"></style>
-		<title>Happy Valentine's Day!</title>
-	</head>
-	<body>
-		<div id="falling-hearts"></div>
-		<div class="main">
-			<h1>С Днем святого Валентина!</br>
-				<span class="one">Ты будешь</span></br>
-				<span class="two">моей</span></br>
-				<span class="three">валентинкой?</span>
-			</h1>
-			<div class="wrapper">
-				<div class="bee">
-					<div class="bee-body">
-						<div class="blink"></div>
-						<div class="mouth"></div>
-						<div class="antenae"></div>
-						<div class="bee-left"></div>
-						<div class="bee-right"></div>
-					</div>
-				</div>
-				<div class="shadow"></div>
-			</div>
-			<h2>
-				Для <span id="valentine">Ани Шайденок</span>:
-				<br />
-				<span id="message">Ты моя пчелка</span>
-			</h2>
-		</div>
-		<script src="./script.js" type="text/javascript"></script>
-	</body>
+<html lang="ru">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<head>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
+    <link href="./style.css" rel="stylesheet" type="text/css">
+    <style id="dynamic"></style>
+    <title>Happy Valentine's Day!</title>
+</head>
+<body>
+<div id="falling-hearts"></div>
+
+<div id="fullpage">
+    <div class="section">
+        <div class="main">
+            <h1>С Днем святого Валентина!</br>
+                <span class="one">Ти</span></br>
+                <span class="two">мій найкращій</span></br>
+                <span class="three">момент!</span>
+            </h1>
+            <div class="wrapper">
+                <div class="bee">
+                    <div class="bee-body">
+                        <div class="blink"></div>
+                        <div class="mouth"></div>
+                        <div class="antenae"></div>
+                        <div class="bee-left"></div>
+                        <div class="bee-right"></div>
+                    </div>
+                </div>
+                <div class="shadow"></div>
+            </div>
+            <h2>
+                Для <span id="valentine">Ані Шайденко</span>:
+                <br/>
+                <span id="message">Ты моя бджілочка!</span>
+            </h2>
+            <div class="ps-block">
+                <h2>
+                    <span id="ps">PS</span>:
+                    <br/>
+                    <span id="ps-message">Гортай вниз</span>
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="main">
+            <h1>
+                <span class="phrase sec1-first-phrase">Коли ти поряд, я відчуваю</br></span>
+                <span class="phrase sec1-second-phrase">себе найбагатшою людиною на землі!</span>
+            </h1>
+        </div>
+    </div>
+    <div class="section">
+        <div class="main">
+            <h1>
+                <span class="phrase sec2-first-phrase">Думки про тебе роблять на душі тепліше</br></span>
+            </h1>
+        </div>
+    </div>
+    <div class="section">
+        <div class="main">
+            <h1>
+                <span class="phrase sec3-first-phrase">Твої очі освітлюють темряву буденності</br></span>
+            </h1>
+        </div>
+    </div>
+    <div class="section">
+        <div class="main">
+            <h1>
+                <span class="phrase sec4-first-phrase">З кожним днем моя любов до тебе </br></span>
+                <span class="phrase sec4-second-phrase">стає все сильнішою</span>
+            </h1>
+        </div>
+    </div>
+    <div class="section">
+        <div class="main">
+            <h1>
+                <span class="phrase sec5-second-phrase">Я тебе дуже кохаю!☀️</span></br>
+                <span class="phrase sec5-third-phrase">Kocham cię bardzo!</span>
+            </h1>
+        </div>
+    </div>
+    <div class="section">
+        <div class="main">
+            <h1>
+                <span class="phrase sec5-first-phrase">Кінець віртуальної валентинки </span></br></br>
+                <span class="phrase ">🌚🌝</span></br></br>
+            </h1>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+<script src="./script.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            navigation: true, // Включение вертикальных точек навигации
+            navigationPosition: 'right', // Положение точек (может быть 'left', 'right', 'top', 'bottom')
+            afterLoad: function(anchorLink, index) {
+                $('.section').removeClass('hidden');
+            },
+            onLeave: function(index, nextIndex, direction) {
+                $('.section').addClass('hidden');
+            }
+        });
+    });
+</script>
+
+</body>
 </html>
